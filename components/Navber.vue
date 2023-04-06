@@ -1,76 +1,35 @@
 <template>
-    <div class="Hero container">
-        <div class="text-container">
-            <h1 class="header">Find your Fire Extinguisher</h1>
-            <p class="snippet">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste iusto illum quidem asperiores,
-                cum nisi aperiam eius ipsa sapiente odit!</p>
-            <button class="button btn">Start Looking</button>
-        </div>
-        <img class="image" src="~assets/fire-extinguisher.svg" alt="fire extinguisher">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark padding">
+    <a class="navbar-brand" href="/">Firengii</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a href="/products" class="nav-link">Products <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a href="/my-items" class="nav-link">My Items <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
     </div>
+    </nav>
 </template>
 
 <script>
-export default {
-
-}
+    export default {
+        
+    }
 </script>
 
 <style scoped>
-.Hero {
-    height: 60vh;
-    position: relative;
-    display: flex;
-    padding: 5rem 0;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-
-.text-container {
-    width: 50%;
-    margin-top: 3rem;
-}
-
-.header {
-    font-weight: 950;
-    font-size: 4.5rem;
-}
-
-.snippet {
-    color: grey;
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-
-.image {
-    width: 27rem;
-    margin-top: 1rem;
-}
-
-.overlay {
-    background: rgba(0, 0, 0, 0);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-}
-
-.button {
-    padding: 12px 4rem;
-    border-radius: 100rem;
-    background-color: rgb(231, 81, 43);
-    color: white;
-    width: 20rem;
-    font-weight: 700;
-    transition: 0.5s;
-}
-
-.button:hover {
-    width: 21.5rem;
-}
-
-@media (max-width: 500px) {
-    .Hero {
-        height: 40vh;
+    .padding {
+        padding: 1rem;
+        background-color: black
     }
-}</style>
+    .nav-left {
+        margin-left: auto;
+    }
+</style>
