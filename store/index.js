@@ -170,10 +170,10 @@
           }
     ]
 
- })
+ });
 
  export const getters = {
-     getProductId: (state) => (id) => {
-        return state.products.id.find(product => product.id === id)
+    getProductById: (state) => (id) => {
+        return state.products.find(product => product.id == id)
      }
  }
