@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <Navber></Navber>
+    <div class="container">
+        <NuxtLink to="/" > Go Back</NuxtLink>
         <Nuxt></Nuxt>
     </div>
 </template>
@@ -10,8 +10,10 @@ export default {
 
 }
 </script>
-
 <style>
+ .container {
+    padding: 5rem 0;
+ }
 html {
     font-family:
         'Source Sans Pro',

@@ -1,12 +1,13 @@
 <template>
   <div>
-    <Navber></Navber>
     <div v-if="product" class="container py-5">
       <div class="hero-container">
         <img :src="require(`@/assets/images/${product.image}`)" alt="" class="image">
         <div class="info-box">
           <h1>{{ product.title }}</h1>
           <p class="snippet">{{ product.snippet }}</p>
+
+          <RentModal></RentModal>
 
         </div>
       </div>
@@ -34,20 +35,25 @@
         </p>
       </div>
 
+      <Reviews></Reviews>
+
     </div>
     <div v-else class="container padding">
-      Page not found
+      <PageNotFound></PageNotFound>
     </div>
   </div>
 </template>
 
 <script>
+import PageNotFound from '~/components/PageNotFound.vue';
+
 export default {
-  computed: {
-    product() {
-      return this.$store.getters.getProductById(this.$route.params.id)
-    }
-  }
+    computed: {
+        product() {
+            return this.$store.getters.getProductById(this.$route.params.id);
+        }
+    },
+    components: { PageNotFound }
 }
 </script>
 

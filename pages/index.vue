@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Navber></Navber>
     <div class="container">
       <Hero></Hero>
       <br> <br>
